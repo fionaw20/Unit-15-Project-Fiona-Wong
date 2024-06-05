@@ -1,0 +1,168 @@
+<!-- 
+Requirements
+[ yes ] Event Listener 1 of 3
+[ yes ] Event Listener 2 of 3
+[ yes ] Event Listener 3 of 3
+
+Select ONE Additional Feature to Add  
+[ no ] Feature 1 - Separate Code Into Three Files .html, .css, .js
+[ no ] Feature 2 - Include an Array Variable 
+[ no ] Feature 3 - Include a User Prompt 
+[ yes ] Feature 4 - Include a Conditional Statement 
+[ no ] Feature 5 - Chain jQuery methods 
+-->
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Project: Scene change</title>
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+      
+        <style>
+
+           /* <uniquifier>: Use a unique and descriptive class name */
+          /*  <weight>: Use a value from 300 to 800 */
+
+          .platypi-<uniquifier> {
+            font-family: "Platypi", serif;
+            font-optical-sizing: auto;
+            font-weight: <700>;
+            font-style: normal;
+          }
+
+
+          
+        #angryShrek {
+            position: absolute;
+            top: 850px;
+            left: 940px;
+            opacity: 0.01;
+        }
+
+          #donkey {
+            position: absolute; 
+            top: 950px;
+            left: 840px;
+            opacity: 0.01;
+          }
+
+          
+        #angrierShrek {
+          position: absolute;
+          opacity: 0.01;
+        }
+
+          body {
+            background-color: rgb(187, 224, 83);
+          }
+
+        p{
+          color: rgb(107, 77, 26);
+          font-size: x-large;
+          text-align: center;
+          width: 50%;
+          margin: 0 auto;
+          font-family: "Platypi", serif;
+        }
+
+        h1{
+          color: rgb(107, 77, 26);
+          font-size: 40px;
+          text-align: center;
+          font-family: "Platypi", serif;
+        }
+          
+        </style>
+    </head>
+    <body>
+
+      <h1 id="shreksswamp"> Shrek's Swamp </h1>
+    <img id="swamp" src="https://wallpapers.com/images/hd/shrek-s-swamp-house-912ivi1v9qemna0n.jpg">  <!-- shrek's swamp -->
+
+  <p> Click (multiple times) on the title, door, and chair to see what (...or who) appears! </p>
+
+      
+    <img id="angryShrek" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d3789c8c-0874-407c-a457-03b147f59b18/dep3hmx-f3a69e6a-8915-49a7-bb0d-6dbfc55940c7.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2QzNzg5YzhjLTA4NzQtNDA3Yy1hNDU3LTAzYjE0N2Y1OWIxOFwvZGVwM2hteC1mM2E2OWU2YS04OTE1LTQ5YTctYmIwZC02ZGJmYzU1OTQwYzcucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.lF0BWS2wiGbhe7qrF9S9jsgYSwUflIdoTY-PYHHWlI4" width="200", height="200">
+
+<img id="angrierShrek" src=
+  "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ebbfa7cc-08ff-417e-9e04-17c18003b086/ddfvmns-74318756-2583-4799-8e5a-6ec132392f63.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2ViYmZhN2NjLTA4ZmYtNDE3ZS05ZTA0LTE3YzE4MDAzYjA4NlwvZGRmdm1ucy03NDMxODc1Ni0yNTgzLTQ3OTktOGU1YS02ZWMxMzIzOTJmNjMuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.AG609GCtphCIdoDRPOs4fuASENNjYNf_3UgfFbta1KM">
+
+<img id="donkey" src = "https://upload.wikimedia.org/wikipedia/en/6/6c/Donkey_%28Shrek%29.png" width = "150", height = "200">
+      
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+      var numClicks = 0;
+        $("#angryShrek").on("click", function(event) {
+            numClicks++;
+
+        if(numClicks == 1){
+          alert("GET OUT OF MY SWAMP!");
+        }
+
+          if(numClicks == 3){
+            alert("I TOLD YOU TO GET OUT OF MY SWAMP!");
+          }
+
+
+          
+        if(numClicks == 5){
+           $("#angryShrek").css("opacity", "1"); 
+          
+        }
+
+          if(numClicks == 6){
+             $("#angryShrek").css("opacity", "0.01"); 
+          }
+
+          if(numClicks == 7){
+             $("#swamp").attr("src", "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ebbfa7cc-08ff-417e-9e04-17c18003b086/ddfvmns-74318756-2583-4799-8e5a-6ec132392f63.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2ViYmZhN2NjLTA4ZmYtNDE3ZS05ZTA0LTE3YzE4MDAzYjA4NlwvZGRmdm1ucy03NDMxODc1Ni0yNTgzLTQ3OTktOGU1YS02ZWMxMzIzOTJmNjMuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.AG609GCtphCIdoDRPOs4fuASENNjYNf_3UgfFbta1KM"); 
+          }
+        });
+
+      var numClicks2 = 0;
+      
+          $("#donkey").on("click", function(event) {
+              numClicks2++;
+
+            if(numClicks2 == 1){
+             $("#donkey").css("opacity", "1"); 
+            }
+
+            if(numClicks2 == 2){
+              $("#donkey").css("opacity", "0.01");
+            }
+
+            if(numClicks2 == 3){
+              $("#swamp").attr("src", "https://i.kym-cdn.com/entries/icons/facebook/000/040/002/cover2.jpg");
+            }
+            
+            
+            });
+          
+          $("h1").on("click", function (event){
+        window.location.href = "https://www.youtube.com/watch?v=IJoehJ9_NRQ";
+          });
+
+          
+            // Do something!
+      
+    </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+<!-- https://i.kym-cdn.com/entries/icons/facebook/000/040/002/cover2.jpg -->
